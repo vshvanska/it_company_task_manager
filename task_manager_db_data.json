@@ -1,0 +1,1221 @@
+[
+  {
+    "model": "projects.TaskType",
+    "pk": 1,
+    "fields": {
+      "name": "Bug"
+    }
+  },
+  {
+    "model": "projects.TaskType",
+    "pk": 2,
+    "fields": {
+      "name": "New feature"
+    }
+  },
+  {
+    "model": "projects.TaskType",
+    "pk": 3,
+    "fields": {
+      "name": "Breaking change"
+    }
+  },
+  {
+    "model": "projects.TaskType",
+    "pk": 4,
+    "fields": {
+      "name": "Optimization"
+    }
+  },
+
+  {
+    "model": "projects.TaskType",
+    "pk": 5,
+    "fields": {
+      "name": "Refactoring"
+    }
+  },
+  {
+    "model": "projects.TaskType",
+    "pk": 6,
+    "fields": {
+      "name": "QA"
+    }
+  },
+  {
+    "model": "projects.Position",
+    "pk": 1,
+    "fields": {
+      "name": "Developer"
+    }
+  },
+  {
+    "model": "projects.Position",
+    "pk": 2,
+    "fields": {
+      "name": "Project Manager"
+    }
+  },
+  {
+    "model": "projects.Position",
+    "pk": 3,
+    "fields": {
+      "name": "QA"
+    }
+  },
+  {
+    "model": "projects.Position",
+    "pk": 4,
+    "fields": {
+      "name": "Designer"
+    }
+  },
+  {
+    "model": "projects.Position",
+    "pk": 5,
+    "fields": {
+      "name": "DevOps"
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "Nikita013",
+      "first_name": "Nikita",
+      "last_name": "Carp",
+      "email": "nikita.carp@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "JohnDoe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "ElenaSmith",
+      "first_name": "Elena",
+      "last_name": "Smith",
+      "email": "elena.smith@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "MikeJohnson",
+      "first_name": "Mike",
+      "last_name": "Johnson",
+      "email": "mike.johnson@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "AliceMiller",
+      "first_name": "Alice",
+      "last_name": "Miller",
+      "email": "alice.miller@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "GeorgeClark",
+      "first_name": "George",
+      "last_name": "Clark",
+      "email": "george.clark@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "LilyWhite",
+      "first_name": "Lily",
+      "last_name": "White",
+      "email": "lily.white@taxi.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "ChrisBrown",
+      "first_name": "Chris",
+      "last_name": "Brown",
+      "email": "chris.brown@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "AndrewJones",
+      "first_name": "Andrew",
+      "last_name": "Jones",
+      "email": "andrew.jones@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "OliviaJohnson",
+      "first_name": "Olivia",
+      "last_name": "Johnson",
+      "email": "olivia.johnson@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "EmmaWhite",
+      "first_name": "Emma",
+      "last_name": "White",
+      "email": "emma.white@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "DanielBlack",
+      "first_name": "Daniel",
+      "last_name": "Black",
+      "email": "daniel.black@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "SophiaClark",
+      "first_name": "Sophia",
+      "last_name": "Clark",
+      "email": "sophia.clark@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "MiaBrown",
+      "first_name": "Mia",
+      "last_name": "Brown",
+      "email": "mia.brown@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": false,
+      "username": "DavidWhite",
+      "first_name": "David",
+      "last_name": "White",
+      "email": "david.white@taxi.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "projects.Worker",
+    "pk": 16,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@user.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "position": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  { "model": "projects.Project",
+    "pk": 1,
+    "fields": {
+      "name": "Taxi Management System",
+      "description": "Developing a comprehensive system for managing taxi services.",
+      "workers": [1, 2, 3, 4, 5]
+    }
+  },
+  {
+    "model": "projects.Project",
+    "pk": 2,
+    "fields": {
+      "name": "Mobile App Redesign",
+      "description": "Redesigning the user interface and improving user experience for the mobile app.",
+      "workers": [6, 7, 8, 9, 10]
+    }
+  },
+  {
+    "model": "projects.Project",
+    "pk": 3,
+    "fields": {
+      "name": "Backend Infrastructure Upgrade",
+      "description": "Upgrading the backend infrastructure for enhanced performance and scalability.",
+      "workers": [11, 12, 13, 14, 15]
+    }
+  },
+  {
+    "model": "projects.Project",
+    "pk": 4,
+    "fields": {
+      "name": "AI-driven Analytics",
+      "description": "Implementing AI-driven analytics for data-driven decision-making.",
+      "workers": [1, 6, 11, 2, 7]
+    }
+  },
+  {
+    "model": "projects.Project",
+    "pk": 5,
+    "fields": {
+      "name": "Customer Support Portal",
+      "description": "Developing a customer support portal for better customer interaction and issue resolution.",
+      "workers": [3, 8, 13, 4, 9]
+    }
+  },
+  {
+    "model": "projects.Project",
+    "pk": 6,
+    "fields": {
+      "name": "Localization for International Markets",
+      "description": "Adapting the application for international markets by implementing localization features.",
+      "workers": [10, 5, 15, 1, 11]
+    }
+  },
+  {
+    "model": "projects.Task",
+    "pk": 1,
+    "fields": {
+      "name": "Fix Dashboard for Vacancies",
+      "description": "There is a bug in the vacancies dashboard that needs fixing.",
+      "deadline": "2023-12-01T12:00:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 1,
+      "project": 6,
+      "workers": [1, 2, 3]
+    }
+  },
+  {
+    "model": "projects.Task",
+    "pk": 2,
+    "fields": {
+      "name": "Add Sign-in with Google Button",
+      "description": "Implement a feature to allow users to sign in with their Google accounts.",
+      "deadline": "2023-12-05T15:00:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 2,
+      "project": 3,
+      "workers": [4, 5, 6]
+    }
+  },
+  {
+    "model": "projects.Task",
+    "pk": 3,
+    "fields": {
+      "name": "Update User Profile Page",
+      "description": "Enhance the user profile page with new features and improvements.",
+      "deadline": "2023-11-25T18:30:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 3,
+      "project": 1,
+      "workers": [7, 8, 9]
+    }
+  },
+  {
+    "model": "projects.Task",
+    "pk": 4,
+    "fields": {
+      "name": "Fix Database Connection Issue",
+      "description": "Investigate and fix the intermittent database connection issue.",
+      "deadline": "2023-11-28T14:45:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 4,
+      "project": 6,
+      "workers": [10, 11, 12]
+    }
+  },
+  {
+    "model": "projects.Task",
+    "pk": 5,
+    "fields": {
+      "name": "Implement Payment Gateway Integration",
+      "description": "Integrate a new payment gateway for the platform.",
+      "deadline": "2023-12-05T12:00:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 1,
+      "project": 3,
+      "workers": [13, 14, 15]
+    }
+  },
+  {
+    "model": "projects.Task",
+    "pk": 6,
+    "fields": {
+      "name": "Optimize Database Queries",
+      "description": "Identify and optimize slow-performing database queries.",
+      "deadline": "2023-12-10T16:00:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 2,
+      "project": 6,
+      "workers": [1, 7, 8]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 7,
+    "fields": {
+      "name": "Update User Authentication",
+      "description": "Implement a more secure authentication system for user accounts.",
+      "deadline": "2023-12-15T10:30:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 3,
+      "project": 1,
+      "workers": [9, 2, 12]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 8,
+    "fields": {
+      "name": "Design Mobile App UI",
+      "description": "Create a modern and user-friendly UI design for the mobile application.",
+      "deadline": "2023-12-20T14:45:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 4,
+      "project": 3,
+      "workers": [12, 13, 14]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 9,
+    "fields": {
+      "name": "Implement Cloud Storage Integration",
+      "description": "Integrate cloud storage services for efficient file management.",
+      "deadline": "2023-12-25T18:00:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 5,
+      "project": 1,
+      "workers": [15, 6, 7, 10]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 10,
+    "fields": {
+      "name": "Test Cross-Browser Compatibility",
+      "description": "Perform thorough testing to ensure compatibility with various web browsers.",
+      "deadline": "2023-12-30T09:15:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 2,
+      "project": 6,
+      "workers": [8, 9, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 11,
+    "fields": {
+      "name": "Create User Onboarding Tutorial",
+      "description": "Develop a tutorial to guide new users through the onboarding process.",
+      "deadline": "2024-01-05T13:30:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [1, 3, 13]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 12,
+    "fields": {
+      "name": "Optimize Database Queries",
+      "description": "Identify and optimize slow-performing database queries.",
+      "deadline": "2024-01-10T11:45:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 1,
+      "project": 3,
+      "workers": [3, 5, 6, 10]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 13,
+    "fields": {
+      "name": "Enhance User Dashboard",
+      "description": "Add new features and improve the overall user experience on the dashboard.",
+      "deadline": "2024-01-15T16:00:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 2,
+      "project": 6,
+      "workers": [7, 8]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 14,
+    "fields": {
+      "name": "Update Project Documentation",
+      "description": "Review and update project documentation for clarity and accuracy.",
+      "deadline": "2024-01-20T08:30:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [4, 14, 2]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 15,
+    "fields": {
+      "name": "Implement Two-Factor Authentication",
+      "description": "Integrate a secure two-factor authentication system for user accounts.",
+      "deadline": "2024-01-25T12:45:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [3, 4]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 16,
+    "fields": {
+      "name": "Conduct Security Audit",
+      "description": "Perform a thorough security audit to identify and address vulnerabilities.",
+      "deadline": "2024-01-30T14:15:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 5,
+      "project": 1,
+      "workers": [4, 7]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 17,
+    "fields": {
+      "name": "Design Mobile App Interface",
+      "description": "Create an intuitive and visually appealing interface for the mobile application.",
+      "deadline": "2024-02-05T09:30:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 1,
+      "project": 6,
+      "workers": [5, 15, 11]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 18,
+    "fields": {
+      "name": "Optimize Server Performance",
+      "description": "Identify and implement optimizations to enhance server performance.",
+      "deadline": "2021-02-10T13:00:00Z",
+      "is_completed": true,
+      "priority": "high",
+      "task_type": 2,
+      "project": 3,
+      "workers": [7, 8, 13]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 19,
+    "fields": {
+      "name": "Create Video Tutorial",
+      "description": "Produce a comprehensive video tutorial for onboarding new users.",
+      "deadline": "2024-02-15T17:45:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [14, 4, 2]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 20,
+    "fields": {
+      "name": "Implement Data Encryption",
+      "description": "Integrate robust data encryption mechanisms to enhance data security.",
+      "deadline": "2024-02-20T10:15:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [13, 14, 1]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 21,
+    "fields": {
+      "name": "Test Cross-Browser Compatibility",
+      "description": "Conduct thorough testing to ensure cross-browser compatibility of the application.",
+      "deadline": "2024-02-25T11:30:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 5,
+      "project": 1,
+      "workers": [1, 2]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 22,
+    "fields": {
+      "name": "Update User Documentation",
+      "description": "Revise and update the user documentation to reflect recent changes.",
+      "deadline": "2024-03-05T14:45:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 1,
+      "project": 6,
+      "workers": [3, 5, 13]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 23,
+    "fields": {
+      "name": "Implement Chat Feature",
+      "description": "Integrate a real-time chat feature for enhanced communication within the application.",
+      "deadline": "2024-03-10T08:00:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 2,
+      "project": 3,
+      "workers": [7, 3, 9]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 24,
+    "fields": {
+      "name": "Create Marketing Campaign",
+      "description": "Devise and execute a marketing campaign to promote the product.",
+      "deadline": "2024-03-15T12:30:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [10]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 25,
+    "fields": {
+      "name": "Enhance User Authentication",
+      "description": "Improve and strengthen the user authentication process for enhanced security.",
+      "deadline": "2024-03-20T09:15:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [13, 4, 15]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 26,
+    "fields": {
+      "name": "Conduct Usability Testing",
+      "description": "Organize and conduct usability testing sessions to gather valuable user feedback.",
+      "deadline": "2024-03-25T10:30:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 5,
+      "project": 1,
+      "workers": [8]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 27,
+    "fields": {
+      "name": "Optimize Database Queries",
+      "description": "Review and optimize database queries to improve overall system performance.",
+      "deadline": "2024-04-01T16:00:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 1,
+      "project": 6,
+      "workers": [4, 15, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 28,
+    "fields": {
+      "name": "Design Mobile App UI",
+      "description": "Create a visually appealing and user-friendly UI design for the mobile application.",
+      "deadline": "2024-04-05T14:45:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 2,
+      "project": 3,
+      "workers": [1, 8, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 30,
+    "fields": {
+      "name": "Implement Automated Tests",
+      "description": "Develop and implement automated test cases to ensure code quality and reliability.",
+      "deadline": "2024-04-10T08:00:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [1, 5, 4]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 29,
+    "fields": {
+      "name": "Update Documentation for New Features",
+      "description": "Document the recently added features and functionalities for user reference.",
+      "deadline": "2024-04-15T12:30:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [3, 4, 15]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 30,
+    "fields": {
+      "name": "Deploy Application to Production",
+      "description": "Coordinate the deployment process to release the application to the production environment.",
+      "deadline": "2024-04-20T09:15:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 5,
+      "project": 1,
+      "workers": [6, 4, 8]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 31,
+    "fields": {
+      "name": "Review and Optimize Codebase",
+      "description": "Conduct a thorough review of the codebase and implement optimizations for better performance.",
+      "deadline": "2024-05-01T14:00:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 1,
+      "project": 6,
+      "workers": [1, 2, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 32,
+    "fields": {
+      "name": "Create Wireframes for New Features",
+      "description": "Design wireframes to illustrate the layout and functionality of upcoming features.",
+      "deadline": "2024-05-05T11:30:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 2,
+      "project": 3,
+      "workers": [4, 5, 6]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 33,
+    "fields": {
+      "name": "Test Application on Multiple Devices",
+      "description": "Perform thorough testing of the application on various devices to ensure compatibility.",
+      "deadline": "2024-05-10T09:45:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [7, 8, 9]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 34,
+    "fields": {
+      "name": "Update User Interface",
+      "description": "Make enhancements to the user interface based on user feedback and design principles.",
+      "deadline": "2024-05-15T15:15:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [10, 11, 12]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 35,
+    "fields": {
+      "name": "Implement CI/CD Pipeline",
+      "description": "Set up a continuous integration and continuous deployment pipeline for automated testing and deployment.",
+      "deadline": "2024-05-20T13:00:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 5,
+      "project": 1,
+      "workers": [13, 14, 15]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 36,
+    "fields": {
+      "name": "Fix Bugs Reported by QA Team",
+      "description": "Address and resolve bugs identified by the quality assurance team during testing.",
+      "deadline": "2024-05-25T10:30:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 1,
+      "project": 6,
+      "workers": [1, 2, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 37,
+    "fields": {
+      "name": "Optimize Database Schema",
+      "description": "Optimize the database schema to improve data retrieval and storage efficiency.",
+      "deadline": "2024-05-30T14:45:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 2,
+      "project": 3,
+      "workers": [4, 5, 6]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 38,
+    "fields": {
+      "name": "Conduct Security Audit",
+      "description": "Perform a comprehensive security audit to identify and address potential vulnerabilities.",
+      "deadline": "2024-06-01T11:15:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [7, 8, 9]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 39,
+    "fields": {
+      "name": "Enhance User Authentication",
+      "description": "Implement additional security measures and features for user authentication.",
+      "deadline": "2024-06-05T09:30:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [10, 11, 12]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 40,
+    "fields": {
+      "name": "Develop Mobile App Version",
+      "description": "Start the development of a mobile application version with unique features.",
+      "deadline": "2024-06-10T15:00:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 5,
+      "project": 1,
+      "workers": [13, 14, 15]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 41,
+    "fields": {
+      "name": "Create User Documentation",
+      "description": "Prepare comprehensive user documentation to assist users in navigating and utilizing the application.",
+      "deadline": "2024-06-15T13:45:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 1,
+      "project": 6,
+      "workers": [1, 2, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 42,
+    "fields": {
+      "name": "Deploy Application to Production",
+      "description": "Coordinate the deployment of the application to the production environment.",
+      "deadline": "2024-06-20T11:30:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 2,
+      "project": 3,
+      "workers": [4, 5, 6]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 43,
+    "fields": {
+      "name": "Monitor Server Performance",
+      "description": "Implement tools and processes to monitor and optimize server performance.",
+      "deadline": "2024-06-25T14:00:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [7]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 44,
+    "fields": {
+      "name": "Conduct User Training Sessions",
+      "description": "Organize and conduct training sessions for users to familiarize them with the application.",
+      "deadline": "2024-07-01T11:15:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [10, 11, 12]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 45,
+    "fields": {
+      "name": "Implement Automated Testing",
+      "description": "Introduce automated testing procedures to enhance the quality and reliability of the application.",
+      "deadline": "2024-07-05T09:30:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 5,
+      "project": 1,
+      "workers": [13, 14, 15, 4]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 46,
+    "fields": {
+      "name": "Create Support Ticket System",
+      "description": "Develop a support ticket system to efficiently manage and address user inquiries and issues.",
+      "deadline": "2024-07-10T15:00:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 1,
+      "project": 6,
+      "workers": [1, 2, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 47,
+    "fields": {
+      "name": "Enhance Data Security Measures",
+      "description": "Implement additional measures to enhance the security of user data.",
+      "deadline": "2024-07-15T13:45:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 2,
+      "project": 3,
+      "workers": [4, 5, 6, 10]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 48,
+    "fields": {
+      "name": "Optimize Mobile App Performance",
+      "description": "Conduct optimizations to improve the performance of the mobile application.",
+      "deadline": "2024-07-20T11:30:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 3,
+      "project": 1,
+      "workers": [7, 8, 9]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 49,
+    "fields": {
+      "name": "Create Analytics Dashboard",
+      "description": "Develop an analytics dashboard to provide insights into user behavior and system performance.",
+      "deadline": "2024-07-25T14:00:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 4,
+      "project": 3,
+      "workers": [10, 11, 12]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 50,
+    "fields": {
+      "name": "Implement Multi-Language Support",
+      "description": "Add multi-language support to the application to cater to a diverse user base.",
+      "deadline": "2024-08-01T11:15:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 5,
+      "project": 1,
+      "workers": [13, 14, 15]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 51,
+    "fields": {
+      "name": "Refactor Codebase for Modularity",
+      "description": "Restructure the codebase to enhance modularity and maintainability.",
+      "deadline": "2024-08-05T09:30:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 1,
+      "project": 6,
+      "workers": [1, 2, 3]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 52,
+    "fields": {
+      "name": "Integrate Payment Gateway",
+      "description": "Integrate a secure payment gateway to facilitate online transactions within the application.",
+      "deadline": "2024-08-10T15:00:00Z",
+      "is_completed": false,
+      "priority": "middle",
+      "task_type": 2,
+      "project": 3,
+      "workers": [4, 5, 6]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 53,
+    "fields": {
+      "name": "Create Interactive Onboarding",
+      "description": "Design and implement an interactive onboarding process for new users.",
+      "deadline": "2024-08-15T13:45:00Z",
+      "is_completed": false,
+      "priority": "low",
+      "task_type": 3,
+      "project": 1,
+      "workers": [7, 8, 9]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 54,
+    "fields": {
+      "name": "Optimize SEO for Web App",
+      "description": "Optimize the web application for search engines to improve visibility and user acquisition.",
+      "deadline": "2024-08-20T11:30:00Z",
+      "is_completed": false,
+      "priority": "urgent",
+      "task_type": 4,
+      "project": 3,
+      "workers": [10, 11, 12]
+    }
+  },
+  {
+    "model": "projects.task",
+    "pk": 55,
+    "fields": {
+      "name": "Develop Chat Feature",
+      "description": "Implement a real-time chat feature to facilitate communication among users.",
+      "deadline": "2024-08-25T14:00:00Z",
+      "is_completed": false,
+      "priority": "high",
+      "task_type": 5,
+      "project": 1,
+      "workers": [13, 14, 15]
+    }
+  }
+]
