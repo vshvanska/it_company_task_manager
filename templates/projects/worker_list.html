@@ -22,7 +22,7 @@
       {% for worker in worker_list %}
           <tr>
             <td><a href="{% url "projects:worker-detail" pk=worker.id %}">{{ worker.id }}</a></td>
-            <td>{{ worker.username }}</td>
+            <td>{% if user == worker %}🚀{% endif %}{{ worker.username }}</td>
             <td>{{ worker.first_name}} {{ worker.last_name }}</td>
             <td>{{ worker.position }}</td>
             <td>{{ worker.email }}</td>

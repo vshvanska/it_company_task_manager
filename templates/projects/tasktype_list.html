@@ -3,7 +3,7 @@
 {% block content %}
   <h1>
     Task type list
-    <a href="#" class="btn btn-primary link-to-page">
+    <a href="{% url 'projects:tasktype-create' %}" class="btn btn-primary link-to-page">
       Create
     </a>
   </h1>
@@ -20,8 +20,8 @@
           <tr>
             <td>{{ tasktype.id }}</td>
             <td>{{ tasktype.name }}</td>
-            <td>update</td>
-            <td>delete</td>
+            <td><a href="{% url 'projects:tasktype-update' pk=tasktype.id %}" class="btn btn-primary ">update</a></td>
+            <td><a href="{% url 'projects:tasktype-delete' pk=tasktype.id %}" class="btn btn-primary ">Delete</a></td>
           </tr>
       {% endfor %}
     </ul>

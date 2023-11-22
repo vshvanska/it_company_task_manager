@@ -23,7 +23,7 @@
       {% for task in task_list %}
           <tr>
             <td><a href="{% url "projects:task-detail" pk=task.id %}">{{ task.id }}</a></td>
-            <td>{{ task.name }}</td>
+            <td>{% if user in task.workers.all %}🚀{% endif %} {{ task.name }}</td>
             <td>{{ task.task_type}}</td>
             <td>{{ task.deadline }}</td>
             <td>{{ task.project }}</td>

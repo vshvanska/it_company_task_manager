@@ -10,10 +10,11 @@
   {% if project_list %}
     <ul>
       {% for project in project_list %}
+        {% if request.user in project.workers.all %}
         <li>
           <a href="{% url "projects:project-detail" pk=project.id %}">{{ project.id }}</a>
           {{ project.name }}:  ({{ project.description }})
-        </li>
+        </li>{% endif %}
       {% endfor %}
     </ul>
   {% else %}

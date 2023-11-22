@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Delete position
+    <a type="button" class="btn btn-outline-success" href="{% url 'projects:position-list' %}">Cancel</a></h1>
+  <p>Are you sure you want to delete the position {{ position.name }}?</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes, delete" class="btn btn-outline-danger"></form>
+{% endblock %}

@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
 from projects.models import Project, Task, Worker, TaskType, Position
@@ -49,3 +50,37 @@ class TaskTypeListView(LoginRequiredMixin, generic.ListView):
 class PositionListView(LoginRequiredMixin, generic.ListView):
     model = Position
     paginate_by = 20
+
+
+class TaskTypeCreateView(LoginRequiredMixin, generic.CreateView):
+    model = TaskType
+    fields = "__all__"
+    success_url = reverse_lazy("projects:tasktype-list")
+
+
+class TaskTypeUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = TaskType
+    fields = "__all__"
+    success_url = reverse_lazy("projects:tasktype-list")
+
+
+class TaskTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = TaskType
+    success_url = reverse_lazy("projects:tasktype-list")
+
+
+class PositionCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Position
+    fields = "__all__"
+    success_url = reverse_lazy("projects:position-list")
+
+
+class PositionUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Position
+    fields = "__all__"
+    success_url = reverse_lazy("projects:tasktype-list")
+
+
+class PositionDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Position
+    success_url = reverse_lazy("projects:tasktype-list")

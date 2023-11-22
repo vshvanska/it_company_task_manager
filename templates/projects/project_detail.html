@@ -29,7 +29,7 @@
         <ul>
             {% for task in tasks %}
                 {% if not task.is_completed %}
-                    <li>{{ task.name }} ({{ task.deadline }})</li>
+                    <li>{% if user in task.workers.all %}🚀{% endif %}{{ task.name }} ({{ task.deadline }})</li>
                 {% endif %}
             {% endfor %}
         </ul>
