@@ -1,8 +1,7 @@
-import datetime
-
+from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
-from django.forms import ModelForm, DateTimeInput
+from django.forms import ModelForm, DateTimeInput, ModelMultipleChoiceField, CheckboxSelectMultiple
 from django.utils import timezone
 
 from projects.models import Worker, Task
@@ -25,6 +24,11 @@ class WorkerUpdateForm(ModelForm):
 
 
 class TaskCreateForm(ModelForm):
+    workers = ModelMultipleChoiceField(
+        queryset=get_user_model().objects.all(),
+        widget=CheckboxSelectMultiple,
+    )
+
     class Meta:
         model = Task
         fields = ["name", "description", "deadline", "is_completed",
@@ -38,6 +42,11 @@ class TaskCreateForm(ModelForm):
 
 
 class TaskUpdateForm(ModelForm):
+    workers = ModelMultipleChoiceField(
+        queryset=get_user_model().objects.all(),
+        widget=CheckboxSelectMultiple,
+    )
+
     class Meta:
         model = Task
         fields = ["name", "description", "deadline", "is_completed",

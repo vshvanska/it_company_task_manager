@@ -16,6 +16,15 @@
   <p>Description: ({{ task.description }})</p>
   <h1>
     Workers:</h1>
+  {% if task in user.tasks.all %}
+      <a href="{% url 'projects:toggle-task-assign' pk=task.id %}" class="btn btn-danger link-to-page">
+        Delete me from this task
+      </a>
+    {% else %}
+      <a href="{% url 'projects:toggle-task-assign' pk=task.id %}" class="btn btn-success link-to-page">
+        Assign me from this task
+      </a>
+    {% endif %}
 
     <ul>
         {% for worker in task.workers.all %}
