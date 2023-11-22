@@ -3,7 +3,7 @@
 {% block content %}
   <h1>
     Tasks list
-    <a href="#" class="btn btn-primary link-to-page">
+    <a href="{% url 'projects:task-create' %}" class="btn btn-primary link-to-page">
       Create
     </a> <a href="{% url 'projects:tasktype-list' %}" class="btn btn-primary link-to-page">
       Check all the task types
