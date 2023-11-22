@@ -30,7 +30,10 @@ from projects.views import (index,
                             TaskTypeUpdateView,
                             PositionUpdateView,
                             TaskTypeDeleteView,
-                            PositionDeleteView)
+                            PositionDeleteView,
+                            ProjectCreateView,
+                            ProjectUpdateView,
+                            ProjectDeleteView)
 
 urlpatterns = [
     path("", index, name="index"),
@@ -74,6 +77,15 @@ urlpatterns = [
     path("workers/positions/delete/<int:pk>",
          PositionDeleteView.as_view(),
          name="position-delete"),
+    path("projects/create/",
+         ProjectCreateView.as_view(),
+         name="project-create"),
+    path("projects/update/<int:pk>",
+         ProjectUpdateView.as_view(),
+         name="project-update"),
+    path("projects/delete/<int:pk>",
+         ProjectDeleteView.as_view(),
+         name="project-delete"),
 
 ]
 

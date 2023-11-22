@@ -20,6 +20,8 @@
             <li>{{ worker.username }} ({{ worker.first_name }} {{ worker.last_name }})</li>
         {% endfor %}
     </ul>
+  <a href="{% url 'projects:project-update' pk=project.id %}" type="button" class="btn btn-outline-primary">Update</a>
+  <a href="{% url 'projects:project-delete' pk=project.id %}" type="button" class="btn btn-outline-danger">Delete</a>
 
   <h1>
     Current tasks:</h1>

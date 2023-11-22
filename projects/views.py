@@ -78,9 +78,26 @@ class PositionCreateView(LoginRequiredMixin, generic.CreateView):
 class PositionUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Position
     fields = "__all__"
-    success_url = reverse_lazy("projects:tasktype-list")
+    success_url = reverse_lazy("projects:position-list")
 
 
 class PositionDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Position
-    success_url = reverse_lazy("projects:tasktype-list")
+    success_url = reverse_lazy("projects:position-list")
+
+
+class ProjectCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Project
+    fields = "__all__"
+    success_url = reverse_lazy("projects:project-list")
+
+
+class ProjectUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Project
+    fields = "__all__"
+    success_url = reverse_lazy("projects:project-list")
+
+
+class ProjectDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Project
+    success_url = reverse_lazy("projects:project-list")

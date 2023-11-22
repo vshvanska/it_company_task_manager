@@ -20,7 +20,7 @@
           <tr>
             <td>{{ position.id }}</td>
             <td>{{ position.name }}</td>
-            <td><a href="{% url 'projects:position-update' pk=position.id %}" class="btn btn-primary link-to-page">Update</a></td>
+            <td><a href="{% url 'projects:position-update' pk=position.id %}" class="btn btn-primary ">Update</a></td>
             <td><a href="{% url 'projects:position-delete' pk=position.id %}" class="btn btn-primary">Delete</a></td>
           </tr>
       {% endfor %}
