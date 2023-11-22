@@ -60,7 +60,7 @@ class TaskUpdateForm(forms.ModelForm):
 
 
 def validate_deadline(deadline):
-    if deadline < timezone.now():
+    if deadline <= timezone.now():
         raise ValidationError("The deadline must be a future date.")
     return deadline
 
@@ -75,10 +75,11 @@ class TaskSearchForm(forms.Form):
 
 
 class ProjectSearchForm(forms.Form):
-    name = forms.CharField(max_length=64,
-                           required=False,
-                           label="",
-                           widget=forms.TextInput(
-                               attrs={
-                                   "placeholder": "Search by name"
-                                   }))
+    name = forms.CharField(
+        max_length=64,
+        required=False,
+        label="",
+        widget=forms.TextInput(
+            attrs={"placeholder": "Search by name"}
+        )
+    )
