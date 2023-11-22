@@ -16,28 +16,19 @@ Including another URLconf
 """
 
 from django.urls import path
-from projects.views import (index,
-                            ProjectListView,
-                            ProjectDetailView,
-                            TaskListView,
-                            TaskDetailView,
-                            WorkerListView,
-                            WorkerDetailView,
-                            TaskTypeListView,
-                            PositionListView,
-                            TaskTypeCreateView,
-                            PositionCreateView,
-                            TaskTypeUpdateView,
-                            PositionUpdateView,
-                            TaskTypeDeleteView,
-                            PositionDeleteView,
-                            ProjectCreateView,
-                            ProjectUpdateView,
-                            ProjectDeleteView,
-                            WorkerCreateView,
-                            WorkerUpdateView,
-                            WorkerDeleteView,
-                            TaskCreateView, TaskDeleteView, TaskUpdateView, toggle_assign_to_task)
+from projects.views import (index, ProjectListView,
+                            ProjectDetailView, TaskListView,
+                            TaskDetailView, WorkerListView,
+                            WorkerDetailView, TaskTypeListView,
+                            PositionListView, TaskTypeCreateView,
+                            PositionCreateView, TaskTypeUpdateView,
+                            PositionUpdateView, TaskTypeDeleteView,
+                            PositionDeleteView, ProjectCreateView,
+                            ProjectUpdateView, ProjectDeleteView,
+                            WorkerCreateView, WorkerUpdateView,
+                            WorkerDeleteView, TaskCreateView,
+                            TaskDeleteView, TaskUpdateView,
+                            toggle_assign_to_task)
 
 urlpatterns = [
     path("", index, name="index"),

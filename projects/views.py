@@ -8,7 +8,7 @@ from django.views import generic
 from projects.forms import (WorkerCreationForm,
                             WorkerUpdateForm,
                             TaskCreateForm,
-                            TaskUpdateForm)
+                            TaskUpdateForm, ProjectSearchForm, TaskSearchForm)
 from projects.models import Project, Task, Worker, TaskType, Position
 
 
@@ -21,6 +21,21 @@ class ProjectListView(LoginRequiredMixin, generic.ListView):
     model = Project
     paginate_by = 5
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(ProjectListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["search_form"] = ProjectSearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Project.objects.all()
+        form = ProjectSearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
+        return queryset
+
 
 class ProjectDetailView(LoginRequiredMixin, generic.DetailView):
     model = Project
@@ -31,6 +46,21 @@ class TaskListView(LoginRequiredMixin, generic.ListView):
     model = Project
     paginate_by = 10
     queryset = Task.objects.select_related("task_type", "project")
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(TaskListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["search_form"] = TaskSearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Task.objects.all()
+        form = TaskSearchForm(self.request.GET)
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["name"])
+        return queryset
 
 
 class TaskDetailView(LoginRequiredMixin, generic.DetailView):
@@ -150,4 +180,7 @@ def toggle_assign_to_task(request, pk):
         worker.tasks.remove(pk)
     else:
         worker.cars.add(pk)
-    return HttpResponseRedirect(reverse_lazy("projects:task-detail", args=[pk]))
+    return HttpResponseRedirect(reverse_lazy(
+        "projects:task-detail",
+        args=[pk]
+    ))
