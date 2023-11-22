@@ -16,7 +16,8 @@ Including another URLconf
 """
 
 from django.urls import path
-from projects.views import index, ProjectListView, ProjectDetailView, TaskListView, TaskDetailView
+from projects.views import index, ProjectListView, ProjectDetailView, TaskListView, TaskDetailView, WorkerListView, \
+    WorkerDetailView
 
 urlpatterns = [
     path("", index, name="index"),
@@ -30,6 +31,11 @@ urlpatterns = [
         TaskListView.as_view(),
         name="task-list"),
     path("tasks/<int:pk>/", TaskDetailView.as_view(), name="task-detail"),
+    path(
+        "workers/",
+        WorkerListView.as_view(),
+        name="worker-list"),
+    path("workers/<int:pk>/", WorkerDetailView.as_view(), name="worker-detail"),
 
 ]
 
