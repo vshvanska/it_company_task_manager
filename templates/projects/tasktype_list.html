@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Task type list
+    <a href="#" class="btn btn-primary link-to-page">
+      Create
+    </a>
+  </h1>
+  {% if tasktype_list %}
+    <table class="table">
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>update</th>
+        <th>delete</th>
+      </tr>
+    <ul>
+      {% for tasktype in tasktype_list %}
+          <tr>
+            <td>{{ tasktype.id }}</td>
+            <td>{{ tasktype.name }}</td>
+            <td>update</td>
+            <td>delete</td>
+          </tr>
+      {% endfor %}
+    </ul>
+
+  {% else %}
+    <p>There are no task types</p>
+  {% endif %}
+
+{% endblock %}

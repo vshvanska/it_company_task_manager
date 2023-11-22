@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 
-from projects.models import Project, Task, Worker
+from projects.models import Project, Task, Worker, TaskType, Position
 
 
 def index(request):
@@ -38,3 +38,13 @@ class WorkerListView(generic.ListView):
 class WorkerDetailView(generic.DetailView):
     model = Worker
     queryset = Worker.objects.prefetch_related("projects", "tasks")
+
+
+class TaskTypeListView(generic.ListView):
+    model = TaskType
+    paginate_by = 20
+
+
+class PositionListView(generic.ListView):
+    model = Position
+    paginate_by = 20
