@@ -3,11 +3,11 @@
 {% block content %}
   <h1>
     {{ worker.username }}   ({{ worker.first_name }} {{ worker.last_name }})
-    <a href="#" class="btn btn-danger link-to-page">
+    <a href="{% url 'projects:worker-delete' pk=worker.id %}" class="btn btn-danger link-to-page">
       Delete
     </a>
 
-    <a href="#" class="btn btn-secondary link-to-page">
+    <a href="{% url 'projects:worker-update' pk=worker.id%}" class="btn btn-secondary link-to-page">
       Update
     </a>
   </h1>

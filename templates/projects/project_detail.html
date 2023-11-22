@@ -3,11 +3,11 @@
 {% block content %}
   <h1>
     {{ project.name }}
-    <a href="#" class="btn btn-danger link-to-page">
+    <a href="{% url 'projects:project-delete' pk=project.id %}" class="btn btn-danger link-to-page">
       Delete
     </a>
 
-    <a href="#" class="btn btn-secondary link-to-page">
+    <a href="{% url 'projects:project-update' pk=project.id %}" class="btn btn-secondary link-to-page">
       Update
     </a>
   </h1>
@@ -20,8 +20,7 @@
             <li>{{ worker.username }} ({{ worker.first_name }} {{ worker.last_name }})</li>
         {% endfor %}
     </ul>
-  <a href="{% url 'projects:project-update' pk=project.id %}" type="button" class="btn btn-outline-primary">Update</a>
-  <a href="{% url 'projects:project-delete' pk=project.id %}" type="button" class="btn btn-outline-danger">Delete</a>
+
 
   <h1>
     Current tasks:</h1>

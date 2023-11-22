@@ -3,7 +3,7 @@
 {% block content %}
   <h1>
     Worker list
-    <a href="#" class="btn btn-primary link-to-page">
+    <a href="{% url 'projects:worker-create' %}" class="btn btn-primary link-to-page">
       Create
     </a> <a href="{% url 'projects:position-list' %}" class="btn btn-primary link-to-page">
       Check all the positions
