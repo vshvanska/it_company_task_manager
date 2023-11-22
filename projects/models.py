@@ -72,7 +72,7 @@ class Task(models.Model):
                                      related_name="tasks")
 
     class Meta:
-        ordering = ("deadline", "priority")
+        ordering = ("is_completed", "deadline", "priority")
 
     def __str__(self):
         return self.name

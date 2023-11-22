@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Project list
+    <a href="#" class="btn btn-primary link-to-page">
+      Create
+    </a>
+  </h1>
+  {% if project_list %}
+    <ul>
+      {% for project in project_list %}
+        <li>
+          <a href="{% url "projects:project-detail" pk=project.id %}">{{ project.id }}</a>
+          {{ project.name }}:  ({{ project.description }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are not your projects</p>
+  {% endif %}
+{% endblock %}

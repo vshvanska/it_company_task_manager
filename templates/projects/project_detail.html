@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ project.name }}
+    <a href="#" class="btn btn-danger link-to-page">
+      Delete
+    </a>
+
+    <a href="#" class="btn btn-secondary link-to-page">
+      Update
+    </a>
+  </h1>
+  <p>Description: ({{ project.description }})</p>
+  <h1>
+    Workers:</h1>
+
+    <ul>
+        {% for worker in project.workers.all %}
+            <li>{{ worker.username }} ({{ worker.first_name }} {{ worker.last_name }})</li>
+        {% endfor %}
+    </ul>
+
+  <h1>
+    Current tasks:</h1>
+
+    {% with tasks=project.tasks.all %}
+    {% if tasks %}
+        <ul>
+            {% for task in tasks %}
+                {% if not task.is_completed %}
+                    <li>{{ task.name }} ({{ task.deadline }})</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have already finished all the task!</p>
+    {% endif %}
+{% endwith %}
+
+{% endblock %}
