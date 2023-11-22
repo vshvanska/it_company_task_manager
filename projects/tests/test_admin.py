@@ -42,18 +42,18 @@ class AdminSiteTests(TestCase):
 
     def test_worker_position_listed(self):
         url = reverse("admin:projects_worker_changelist")
-        res = self.client.get(url)
-        self.assertContains(res, self.worker.position)
+        response = self.client.get(url)
+        self.assertContains(response, self.worker.position)
 
     def test_worker_detail_position_listed(self):
         url = reverse("admin:projects_worker_change", args=[self.worker.id])
-        res = self.client.get(url)
-        self.assertContains(res, self.worker.position)
+        response = self.client.get(url)
+        self.assertContains(response, self.worker.position)
 
     def test_add_worker_detail_position_listed(self):
         url = reverse("admin:projects_worker_add")
-        res = self.client.get(url)
-        self.assertTrue(res, self.worker.position)
+        response = self.client.get(url)
+        self.assertTrue(response, self.worker.position)
 
     def test_get_workers_displayed_in_project_admin(self):
         url = reverse("admin:projects_project_change", args=[self.project.id])
