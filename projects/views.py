@@ -41,6 +41,16 @@ class ProjectDetailView(LoginRequiredMixin, generic.DetailView):
     model = Project
     queryset = Project.objects.prefetch_related("tasks", "tasks__workers")
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        project = self.object
+        context["active_tasks"] = (project.tasks.
+                                   filter(is_completed=False).count())
+        context["percent_of_finished_task"] = round(
+            project.tasks.filter(is_completed=True).
+            count() / project.tasks.count() * 100)
+        return context
+
 
 class TaskListView(LoginRequiredMixin, generic.ListView):
     model = Project

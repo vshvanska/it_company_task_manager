@@ -28,6 +28,10 @@
             <li>{{ worker.username }} ({{ worker.first_name }} {{ worker.last_name }})</li>
         {% endfor %}
     </ul>
+            <button type="button" class="btn btn-sm btn-outline-info  mb-0">
+               This project have {{ active_tasks }} active tasks</button>
+            <button type="button" class="btn btn-sm btn-outline-info  mb-0">
+               You have already finished {{ percent_of_finished_task }}% of tasks</button>
             <h6>
     Current tasks:</h6>
 
