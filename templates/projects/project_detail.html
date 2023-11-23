@@ -1,29 +1,35 @@
-{% extends "base.html" %}
+{% extends 'layouts/base-presentation.html' %}
 
 {% block content %}
-  <h1>
-    {{ project.name }}
-    <a href="{% url 'projects:project-delete' pk=project.id %}" class="btn btn-danger link-to-page">
-      Delete
-    </a>
-
-    <a href="{% url 'projects:project-update' pk=project.id %}" class="btn btn-secondary link-to-page">
-      Update
-    </a>
-  </h1>
-  <p>Description: ({{ project.description }})</p>
-  <h1>
-    Workers:</h1>
-
+  <section class="py-sm-7 py-5 position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto">
+          <div class="row py-lg-7 py-5">
+            <div class="col-lg-3 col-md-5 position-relative my-auto">
+              <img class="img border-radius-lg max-width-200 w-100 position-relative z-index-2" src="https://miro.medium.com/v2/resize:fit:1400/1*8ygFKYb0Yo6Hc-vnScGA9A.png">
+            </div>
+            <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="mb-0">{{ project.name }}</h4>
+                <div class="d-block"><a href="{% url 'projects:project-update' pk=project.id %}" class="btn btn-outline-secondary mb-0">
+      Update</a>
+                  <a href="{% url 'projects:project-delete' pk=project.id %}" class="btn btn-outline-primary mb-0">
+      Delete</a>
+                </div>
+              </div>
+              <h6>Description: </h6>
+              <p class="text-lg mb-0">
+                {{ project.description }}
+              </p>
+              <h6>Workers:</h6>
     <ul>
         {% for worker in project.workers.all %}
             <li>{{ worker.username }} ({{ worker.first_name }} {{ worker.last_name }})</li>
         {% endfor %}
     </ul>
-
-
-  <h1>
-    Current tasks:</h1>
+            <h6>
+    Current tasks:</h6>
 
     {% with tasks=project.tasks.all %}
     {% if tasks %}
@@ -38,5 +44,9 @@
         <p>You have already finished all the task!</p>
     {% endif %}
 {% endwith %}
-
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></section>
 {% endblock %}

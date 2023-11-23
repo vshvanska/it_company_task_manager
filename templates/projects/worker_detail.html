@@ -1,15 +1,18 @@
-{% extends "base.html" %}
-
+{% extends 'layouts/base-presentation.html' %}
+{% block body_class %} position-list {% endblock body_class %}
 {% block content %}
-  <h1>
-    {{ worker.username }}   ({{ worker.first_name }} {{ worker.last_name }})
-    <a href="{% url 'projects:worker-delete' pk=worker.id %}" class="btn btn-danger link-to-page">
-      Delete
-    </a>
+  <header>
+    <div class="page-header section-height-85">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 d-flex justify-content-center flex-column">
+            <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+              <div>
+                <h3 class="text-gradient text-primary">{{ worker.username }}   ({{ worker.first_name }} {{ worker.last_name }})</h3>
+                <a href="{% url 'projects:worker-update' pk=worker.id%}" class="btn btn-outline-secondary mb-0">Update</a>
+                <a href="{% url 'projects:worker-delete' pk=worker.id %}" class="btn btn-outline-primary mb-0">Delete</a>
 
-    <a href="{% url 'projects:worker-update' pk=worker.id%}" class="btn btn-secondary link-to-page">
-      Update
-    </a>
+
   </h1>
   <p>Position: ({{ worker.position }})</p>
   <p>Email: {{ worker.email }}</p>
@@ -30,7 +33,7 @@
         <ul>
             {% for task in tasks %}
                 {% if not task.is_completed %}
-                    <li>{{ task.name }} ({{ task.deadline }})</li>
+                  <a type="button" class="btn btn-outline-primar btn-sm me-2" href="{% url "projects:task-detail" pk=task.id %}">{{ task.name }} ({{ task.deadline }})</a>
                 {% endif %}
             {% endfor %}
         </ul>
@@ -39,4 +42,11 @@
     {% endif %}
 {% endwith %}
 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}

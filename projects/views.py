@@ -19,7 +19,7 @@ def index(request):
 
 class ProjectListView(LoginRequiredMixin, generic.ListView):
     model = Project
-    paginate_by = 5
+    paginate_by = 8
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ProjectListView, self).get_context_data(**kwargs)
@@ -44,7 +44,7 @@ class ProjectDetailView(LoginRequiredMixin, generic.DetailView):
 
 class TaskListView(LoginRequiredMixin, generic.ListView):
     model = Project
-    paginate_by = 10
+    paginate_by = 15
     queryset = Task.objects.select_related("task_type", "project")
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -69,7 +69,7 @@ class TaskDetailView(LoginRequiredMixin, generic.DetailView):
 
 class WorkerListView(LoginRequiredMixin, generic.ListView):
     model = Worker
-    paginate_by = 10
+    paginate_by = 15
     queryset = Worker.objects.select_related("position")
 
 
@@ -80,12 +80,12 @@ class WorkerDetailView(LoginRequiredMixin, generic.DetailView):
 
 class TaskTypeListView(LoginRequiredMixin, generic.ListView):
     model = TaskType
-    paginate_by = 20
+    paginate_by = 15
 
 
 class PositionListView(LoginRequiredMixin, generic.ListView):
     model = Position
-    paginate_by = 20
+    paginate_by = 15
 
 
 class TaskTypeCreateView(LoginRequiredMixin, generic.CreateView):
@@ -179,7 +179,7 @@ def toggle_assign_to_task(request, pk):
     ):
         worker.tasks.remove(pk)
     else:
-        worker.cars.add(pk)
+        worker.tasks.add(pk)
     return HttpResponseRedirect(reverse_lazy(
         "projects:task-detail",
         args=[pk]

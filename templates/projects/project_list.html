@@ -1,28 +1,38 @@
-{% extends "base.html" %}
+{% extends 'layouts/base-presentation.html' %}
 {% load crispy_forms_filters %}
 
 {% block content %}
+  <div class="container mt-8">
   <h1>
     Project list
-    <a href="{% url 'projects:project-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a>
+    <a href="{% url 'projects:project-create' %}" class="btn btn-primary link-to-page">+</a>
   </h1>
-  <form method="get" action="" class="form-inline">
-  {{ search_form|crispy }}
-  <input class="btn btn-secondary" type="submit" value="🔍">
+  <form method="get" action="" class="form-inline d-flex align-items-center">
+      {{ search_form|crispy }}
+      <input class="btn btn-secondary" type="submit" value="🔍">
   </form>
   {% if project_list %}
-    <ul>
+    <div class="row">
       {% for project in project_list %}
         {% if request.user in project.workers.all %}
-        <li>
-          <a href="{% url "projects:project-detail" pk=project.id %}">{{ project.id }}</a>
-          {{ project.name }}:  ({{ project.description }})
-        </li>{% endif %}
-      {% endfor %}
-    </ul>
+        <div class="col-lg-3 col-sm-6">
+          <div class="card card-plain card-blog">
+            <div class="card-body px-0">
+              <h5>
+                <a href="javascript:;" class="text-dark font-weight-bold">{{ project.name }}</a>
+              </h5>
+              <p>
+                {{ project.description }}
+              </p>
+              <a href="{% url "projects:project-detail" pk=project.id %}" class="text-info icon-move-right">Read More
+                <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+          {% endif %}
+      {% endfor %}</div>
   {% else %}
     <p>There are not your projects</p>
-  {% endif %}
+  {% endif %}</div>
 {% endblock %}

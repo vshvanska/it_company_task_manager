@@ -1,9 +1,24 @@
-{% extends "base.html" %}
+{% extends 'layouts/base-presentation.html' %}
 {% block content %}
-  <h1>Delete task
-    <a type="button" class="btn btn-outline-success" href="{% url 'projects:project-list' %}">Cancel</a></h1>
+{% load crispy_forms_filters %}
+<header>
+    <div class="container">
+      <div class="row">
+        <div class="row text-center my-sm-5 mt-5">
+          <div class="col-lg-7 mx-auto my-sm-5 mt-5">
+            <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+              <div class="text-center">
+                <h1>Delete task
+    <a type="button" class="btn bg-gradient-primary w-auto me-1 mb-0" href="{% url 'projects:project-list' %}">Cancel</a></h1>
   <p>Are you sure you want to delete the task {{ task.name }}?</p>
   <form action="" method="post">
     {% csrf_token %}
-    <input type="submit" value="Yes, delete" class="btn btn-outline-danger"></form>
+    <input type="submit" value="Yes, delete" class="btn btn-outline-primary mb-0"></form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}

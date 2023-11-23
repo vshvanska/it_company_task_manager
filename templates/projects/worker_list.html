@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends 'layouts/base-presentation.html' %}
 
 {% block content %}
+  <div class="container mt-8">
   <h1>
     Worker list
     <a href="{% url 'projects:worker-create' %}" class="btn btn-primary link-to-page">
@@ -21,17 +22,16 @@
     <ul>
       {% for worker in worker_list %}
           <tr>
-            <td><a href="{% url "projects:worker-detail" pk=worker.id %}">{{ worker.id }}</a></td>
+            <td><a type="button" class="btn btn-outline-primar btn-sm me-2" href="{% url "projects:worker-detail" pk=worker.id %}">{{ worker.id }}</a></td>
             <td>{% if user == worker %}🚀{% endif %}{{ worker.username }}</td>
             <td>{{ worker.first_name}} {{ worker.last_name }}</td>
             <td>{{ worker.position }}</td>
             <td>{{ worker.email }}</td>
           </tr>
       {% endfor %}
-    </ul>
+    </ul></table>
 
   {% else %}
     <p>There are no workers</p>
-  {% endif %}
-
+  {% endif %}</div>
 {% endblock %}

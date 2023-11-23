@@ -1,13 +1,19 @@
-{% extends "base.html" %}
-
+{% extends 'layouts/base-presentation.html' %}
+{% block body_class %} position-list {% endblock body_class %}
 {% block content %}
-  <h1>
-    Position list
-    <a href="{% url 'projects:position-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a>
-  </h1>
-  {% if position_list %}
+  <header>
+    <div class="page-header section-height-85">
+      <div>
+        <img class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0" src="{{ ASSETS_ROOT }}/img/curved-images/curved8.jpg">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 d-flex justify-content-center flex-column">
+            <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+              <div class="text-center">
+                <h3 class="text-gradient text-primary">Position list
+    <a href="{% url 'projects:position-create' %}" >+</a></h3>
+                {% if position_list %}
     <table class="table">
       <tr>
         <th>id</th>
@@ -25,9 +31,16 @@
           </tr>
       {% endfor %}
     </ul>
+    </table>
 
   {% else %}
     <p>There are no positions</p>
   {% endif %}
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 {% endblock %}

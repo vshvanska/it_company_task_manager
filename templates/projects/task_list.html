@@ -1,42 +1,38 @@
-{% extends "base.html" %}
+{% extends 'layouts/base-presentation.html' %}
 {% load crispy_forms_filters %}
 
 {% block content %}
+  <div class="container mt-8">
   <h1>
     Tasks list
-    <a href="{% url 'projects:task-create' %}" class="btn btn-primary link-to-page">
-      Create
-    </a> <a href="{% url 'projects:tasktype-list' %}" class="btn btn-primary link-to-page">
+    <a href="{% url 'projects:project-create' %}" class="btn btn-primary link-to-page">+</a> <a href="{% url 'projects:tasktype-list' %}" class="btn btn-primary link-to-page">
       Check all the task types
     </a>
   </h1>
-  <form method="get" action="" class="form-inline">
+  <form method="get" action="" class="form-inline d-flex align-items-center">
   {{ search_form|crispy }}
   <input class="btn btn-secondary" type="submit" value="🔍">
   </form>
   {% if task_list %}
-    <table class="table">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Task Type</th>
-        <th>Deadline</th>
-        <th>project</th>
-        <th>Is completed</th>
-      </tr>
-    <ul>
+    <div class="row">
       {% for task in task_list %}
-          <tr>
-            <td><a href="{% url "projects:task-detail" pk=task.id %}">{{ task.id }}</a></td>
-            <td>{% if user in task.workers.all %}🚀{% endif %} {{ task.name }}</td>
-            <td>{{ task.task_type}}</td>
-            <td>{{ task.deadline }}</td>
-            <td>{{ task.project }}</td>
-            <td>{{ task.is_completed }}</td>
-          </tr>
-      {% endfor %}
-    </ul>
+        <div class="col-lg-3 col-sm-6">
+          <div class="card card-plain card-blog">
+            <div class="card-body px-0">
+              <h5>
+                <a href="javascript:;" class="text-dark font-weight-bold">{% if user in task.workers.all %}🚀{% endif %} {{ task.name }}</a>
+              </h5>
+              <h6>
+                {{ task.task_type }}, deadline: {{ task.deadline }}
+              </h6><p class="{% if task.is_completed == False %}{% endif %}">active</p>
+              <a href="{% url "projects:task-detail" pk=task.id %}" class="text-info icon-move-right">Read More
+                <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}</div>
   {% else %}
     <p>There are not your tasks</p>
-  {% endif %}
+  {% endif %}</div>
 {% endblock %}
