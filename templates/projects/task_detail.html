@@ -28,8 +28,13 @@
                 </div>
                 <div class="col-auto">
                   <span>{{ task.task_type }}</span>
-                </div>
-              </div><h6>Project:</h6>
+                </div></div>
+                {% if task.is_completed %}
+                  <button type="button" class="btn btn-outline-secondary mb-0">Closed</button>
+
+                {% else %}<button type="button" class="btn btn-outline-success btn-sm me-2">Active</button>
+                {% endif %}
+              <h6>Project:</h6>
               <p class="text-lg mb-0">
                 {{ task.project }}
               </p><h6>Description: </h6>
