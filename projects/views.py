@@ -161,11 +161,13 @@ class ProjectDeleteView(LoginRequiredMixin, generic.DeleteView):
 class WorkerCreateView(LoginRequiredMixin, generic.CreateView):
     model = Worker
     form_class = WorkerCreationForm
+    success_url = reverse_lazy("projects:worker-list")
 
 
 class WorkerUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Worker
     form_class = WorkerUpdateForm
+    success_url = reverse_lazy("projects:worker-list")
 
 
 class WorkerDeleteView(LoginRequiredMixin, generic.DeleteView):

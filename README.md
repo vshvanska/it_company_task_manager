@@ -42,7 +42,7 @@ You can use the following command to load prepared data from fixture to test:
 
 
 After loading data from fixture you can use following superuser (or create another one by yourself):
-  - Login: `admin`
+  - Login: `user1`
   - Password: `1qazcde3`
 
 Runserver:
