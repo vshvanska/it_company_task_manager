@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
+from django.utils import timezone
 from django.views import generic
 
 from projects.forms import (WorkerCreationForm,
@@ -86,6 +87,14 @@ class WorkerListView(LoginRequiredMixin, generic.ListView):
 class WorkerDetailView(LoginRequiredMixin, generic.DetailView):
     model = Worker
     queryset = Worker.objects.prefetch_related("projects", "tasks")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        worker = self.object
+        context["overdue_tasks"] = (worker.tasks.
+                                    filter(is_completed=False,
+                                           deadline__lt=timezone.now()).count())
+        return context
 
 
 class TaskTypeListView(LoginRequiredMixin, generic.ListView):

@@ -16,9 +16,25 @@ You can see the database schema [here](https://dbdiagram.io/d/654363957d8bbd6465
 
 Getting Started
 - To get started with TeamTask Manager, follow these steps:
-  - Install requirements: 
-   pip install -r requirements.txt 
-  - Database Setup: python manage.py migrate 
+ Fork the repo (GitHub repository)
+1. Clone the forked repo
+    ```
+    git clone the-link-from-your-forked-repo
+    ```
+    - You can get the link by clicking the `Clone or download` button in your repo 
+2. Open the project folder in your IDE 
+3. Open a terminal in the project folder 
+4. Create virtual environment
+    and install requirements in it, but if not:
+    ```
+    python -m venv venv
+    venv\Scripts\activate (on Windows)
+    source venv/bin/activate (on macOS)
+    pip install -r requirements.txt
+    ```
+5. Database Setup:
+  - `python manage.py makemigrations`
+  - `python manage.py migrate`
 
 
 You can use the following command to load prepared data from fixture to test:
@@ -28,3 +44,6 @@ You can use the following command to load prepared data from fixture to test:
 After loading data from fixture you can use following superuser (or create another one by yourself):
   - Login: `admin`
   - Password: `1qazcde3`
+
+Runserver:
+`python manage.py runsever`
